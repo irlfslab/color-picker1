@@ -3,16 +3,16 @@ function ColorPicker(){
 
     const [color, setColor] = useState("#FFFFFF");
 
-    function handleColorChange(event){
+    function colorChg(event){
         setColor(event.target.value);
     }
-    return (<div className="color-picker-container">
+    return (<div className="color-container">
                 <h1>Color Picker</h1>
-                <div className="color-display" style={{backgroundColor : color}}>
-                    <p>Selected Color: {color}</p>
+                <div className="color-disp" style={{backgroundColor : color}}>
+                    <p>Color selected: {color}</p>
                 </div>
                 <label>Select a Color: </label>
-                <input type="color" value={color} onChange={handleColorChange}/>
+                <input type="color" value={color} onChange={colorChg}/>
             </div>);
 }
 export default ColorPicker
